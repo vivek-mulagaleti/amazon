@@ -12,6 +12,8 @@ import dayjs from "https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js";
 
 import { deliveryOptions,getDeliveryOption } from "../../data/deliveryOptions.js";
 
+import { renderPaymentSummary } from "./paymentSummery.js";
+
 
 export function renderOrderSummary() {
 
@@ -106,6 +108,8 @@ export function renderOrderSummary() {
 
       removeFromCart(productId);
 
+      renderPaymentSummary();
+
       renderOrderSummary();
 
     });
@@ -133,7 +137,7 @@ export function renderOrderSummary() {
 
       // Re-render the page
       // so delivery date changes immediately
-
+      renderPaymentSummary();
       renderOrderSummary();
 
     });

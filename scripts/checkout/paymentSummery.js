@@ -55,5 +55,5 @@ export function renderPaymentSummary(){
           </button>
     `;
 
-    document.querySelector('.js-payment-summary').innerHTML=paymentSummaryhtml
+    document.querySelector('.js-payment-summary').innerHTML=paymentSummaryhtml;
 }
